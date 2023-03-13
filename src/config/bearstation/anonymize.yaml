@@ -1,0 +1,59 @@
+partial_anonymize:
+  hs_players:
+    columns:
+      email:
+        formatter: email
+      first_name:
+        formatter: firstName
+      last_name:
+        formatter: lastName
+  players:
+    columns:
+      email:
+        formatter: email
+      first_name:
+        formatter: firstName
+      last_name:
+        formatter: lastName
+  sq_players:
+    columns:
+      email:
+        formatter: email
+      first_name:
+        formatter: firstName
+      last_name:
+        formatter: lastName
+  partners:
+    columns:
+      name:
+        formatter: company
+      city:
+        formatter: city
+      vat:
+        formatter: randomNumber(8)
+      email:
+        formatter: email
+
+  users:
+    provider:
+      where: "`email` not like 'sebastian.depta%' AND `email` not like '%sidhmor%'"
+    columns:
+      email:
+        formatter: email
+      name:
+        formatter: firstName
+      surname:
+        formatter: lastName
+      phone:
+        formatter: phoneNumber
+
+  en.trants:
+    columns:
+      email:
+        formatter: email
+      name:
+        formatter: firstName
+      surname:
+        formatter: lastName
+      phone:
+        formatter: phoneNumber

@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  database:
+    image: mysql:8
+    container_name: masquerade_database
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_ROOT_HOST: "%"
+    ports:
+      - ${MYSQL_PORT}:3306
+  php:
+    build:
+        context: docker/php
+        dockerfile: Dockerfile
+    volumes:
+      - .:/home/app
