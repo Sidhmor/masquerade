@@ -20,7 +20,9 @@
   ],
   "autoload": {
     "psr-4": {
-      "Elgentos\\": "src/Elgentos"
+      "Elgentos\\": "src/Elgentos",
+      "Fakers\\": "src/Fakers",
+      "Processors\\": "src/Processors"
     }
   },
   "bin": ["bin/masquerade"],
